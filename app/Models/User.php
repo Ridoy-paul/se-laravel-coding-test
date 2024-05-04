@@ -9,6 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Transactions;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -25,6 +27,8 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'account_type',
+        'balance',
         'email',
         'password',
     ];
@@ -62,4 +66,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
+    public function transactions()
+    {
+        return $this->hasMany(Transactions::class, 'user_id')->where('user_id', Auth::user()->id);
+    }
+
+
 }
