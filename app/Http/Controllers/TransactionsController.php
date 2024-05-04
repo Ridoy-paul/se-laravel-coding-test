@@ -152,7 +152,7 @@ class TransactionsController extends Controller
                     return back()->wtih('error', 'Failed to update user balance.');
                 }
                 DB::commit();
-                return redirect()->route('transaction.deposit.list')->withSuccess('Withdraw successful.');
+                return redirect()->route('transaction.withdraw.list')->withSuccess('Withdraw successful.');
             } 
             else {
                 DB::rollBack();
