@@ -20,6 +20,20 @@
             </div>
 
             <div class="mt-4">
+                <div class="mt-2">
+                    <span class="block font-medium text-sm">Account Type:</span>
+                    <label for="individual" class="inline-flex items-center mt-1">
+                        <input type="radio" id="individual" name="account_type" value="individual" class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" required>
+                        <span class="ml-2 text-sm ms-1">Individual</span>
+                    </label>
+                    <label for="business" class="inline-flex items-center mt-1 ms-2">
+                        <input type="radio" id="business" name="account_type" value="business" class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out">
+                        <span class="ml-2 text-sm  ms-1">Business</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="mt-4">
                 <x-label for="password" value="{{ __('Password') }}" />
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
