@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('title')All Transactions @endsection
+@section('title')Deposit Transaction List @endsection
 
 @section('content')
 
@@ -11,7 +11,7 @@
 <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
 
 <div class="container-fluid p-0">
-    <h1 class="h3 mb-3"><strong>All Transactions</strong></h1>
+    <h1 class="h3 mb-3"><strong>Deposit Transaction List</strong></h1>
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -20,9 +20,7 @@
                         <thead>
                             <tr>
                                 <th>Date</th>
-                                <th>Type</th>
                                 <th>Amount</th>
-                                <th>Fee</th>
                                 <th>Created At</th>
                             </tr>
                         </thead>
@@ -44,12 +42,10 @@
       var table = $('.data-table').DataTable({
           processing: true,
           serverSide: true,
-          ajax: "{{ route('transaction.all') }}",
+          ajax: "{{ route('transaction.deposit.list') }}",
           columns: [
               {data: 'date', name: 'date'},
-              {data: 'transaction_type', name: 'transaction_type'},
               {data: 'amount', name: 'amount'},
-              {data: 'fee', name: 'fee'},
               {data: 'created_at', name: 'created_at'},
           ]
       });

@@ -5,92 +5,48 @@
         </a>
 
         <ul class="sidebar-nav">
-            <li class="sidebar-header">
-                Pages
-            </li>
-
+            
             <li class="sidebar-item {{ isActiveRoute(['account.dashboard']) }}">
                 <a class="sidebar-link" href="{{ route('account.dashboard') }}">
                     <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
                 </a>
             </li>         
 
-            
-
             <li class="sidebar-item {{ isActiveRoute(['transaction.all']) }}">
                 <a class="sidebar-link" href="{{ route('transaction.all') }}">
-                    <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">All Transactions</span>
+                    <i class="align-middle" data-feather="activity"></i> <span class="align-middle">All Transactions</span>
                 </a>
             </li>
-            
+
+            <li class="sidebar-header">
+                Deposit
+            </li>
             <li class="sidebar-item {{ isActiveRoute(['transaction.deposit.create']) }}">
                 <a class="sidebar-link" href="{{ route('transaction.deposit.create') }}">
-                    <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Make Deposit</span>
+                    <i class="align-middle" data-feather="arrow-down-circle"></i> <span class="align-middle">Make Deposit</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item {{ isActiveRoute(['transaction.deposit.list']) }}">
+                <a class="sidebar-link" href="{{ route('transaction.deposit.list') }}">
+                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Deposit List</span>
+                </a>
+            </li>
+
+            <li class="sidebar-header">
+                Withdraw
+            </li>
+            <li class="sidebar-item {{ isActiveRoute(['transaction.withdraw.create']) }}">
+                <a class="sidebar-link" href="{{ route('transaction.withdraw.create') }}">
+                    <i class="align-middle" data-feather="arrow-up-circle"></i> <span class="align-middle">Make Withdraw</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ isActiveRoute(['transaction.withdraw.list']) }}">
+                <a class="sidebar-link" href="{{ route('transaction.withdraw.list') }}">
+                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Withdraw List</span>
                 </a>
             </li>
             
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-sign-up.html">
-                    <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-blank.html">
-                    <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
-                </a>
-            </li>
-
-            <li class="sidebar-header">
-                Tools & Components
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="ui-buttons.html">
-                    <i class="align-middle" data-feather="square"></i> <span class="align-middle">Buttons</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="ui-forms.html">
-                    <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="ui-cards.html">
-                    <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Cards</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="ui-typography.html">
-                    <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Typography</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="icons-feather.html">
-                    <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
-                </a>
-            </li>
-
-            <li class="sidebar-header">
-                Plugins & Addons
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="charts-chartjs.html">
-                    <i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Charts</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="maps-google.html">
-                    <i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
-                </a>
-            </li>
         </ul>
     </div>
 </nav>
